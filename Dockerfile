@@ -2,8 +2,8 @@
 FROM openjdk:17-alpine AS build
 COPY src /src
 WORKDIR /src
-RUN javac com/example/test1/App.java
-RUN jar cvfm App.jar Manifest.txt com/example/test1/*.class
+RUN javac com/example/test/App.java
+RUN jar cvfm App.jar Manifest.txt com/example/test/*.class
 
 # Java実行
 FROM gcr.io/distroless/java17-debian11
